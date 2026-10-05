@@ -63,10 +63,7 @@
   <project path="external/steam-audio" name="external_steam-audio" remote="evo" />
 
   <!-- Frameworks -->
-  <project path="frameworks/av" name="frameworks_av" groups="pdk,sysui-studio" remote="evo" />
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="evo" />
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="evo" />
-  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="evo" />
   <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" groups="pdk,sysui-studio" remote="evo" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk,sysui-studio" remote="evo" />
 
@@ -93,7 +90,6 @@
   <project path="packages/apps/EvoEgg" name="packages_apps_EvoEgg" remote="evo" />
   <project path="packages/apps/Evolver" name="packages_apps_Evolver" remote="evo" />
   <project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="evo" />
-  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="evo" />
   <project path="packages/apps/LMOFreeform" name="packages_apps_LMOFreeform" remote="evo" />
   <project path="packages/apps/LineageParts" name="packages_apps_LineageParts" remote="evo" />
   <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="evo" />
@@ -103,7 +99,6 @@
   <project path="packages/apps/Stk" name="packages_apps_Stk" groups="apps_stk,pdk-fs" remote="evo" />
   <project path="packages/apps/SystemUIClocks" name="packages_apps_SystemUIClocks" remote="evo" />
   <project path="packages/apps/ThemeStore" name="packages_apps_ThemeStore" remote="evo" />
-  <project path="packages/apps/Updater" name="packages_apps_Updater" remote="evo" />
   <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" groups="pdk-fs,sysui-studio" remote="evo" />
   <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="evo" />
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="evo" />
@@ -133,7 +128,6 @@
   <project path="system/vold" name="system_vold" groups="pdk" remote="evo" />
 
   <!-- Vendor -->
-  <project path="vendor/extras" name="vendor_extras" remote="evo" />
   <project path="vendor/gms" name="vendor_gms" remote="evo" clone-depth="1" />
   <project path="vendor/gms-mosey" name="vendor_gms-mosey" remote="evo" />
   <project path="vendor/lineage" name="vendor_evolution" remote="evo" />

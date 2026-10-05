@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<manifest>
+  <remote name="lenovo" fetch="https://github.com/Lenovo-SM8850" />
+  <remote name="clo" fetch="https://git.codelinaro.org/clo/la" />
+  <project path="device/lenovo/sm8850-common" name="android_device_lenovo_sm8850-common" remote="lenovo" revision="cnb" />
+  <project path="device/lenovo/baldur" name="android_device_lenovo_baldur" remote="lenovo" revision="cnb" />
+  <project path="hardware/lenovo" name="android_hardware_lenovo" remote="lenovo" revision="cnb" />
+  <project path="vendor/lenovo/sm8850-common" name="proprietary_vendor_lenovo_sm8850-common" remote="lenovo" revision="cnb" />
+  <project path="vendor/lenovo/baldur" name="proprietary_vendor_lenovo_baldur" remote="lenovo" revision="cnb" />
+  <project path="vendor/translations" name="android_vendor_translations" remote="lenovo" revision="cnb" />
+  <project path="vendor/qcom/opensource/lights" name="platform/vendor/qcom-opensource/lights" remote="clo" revision="3ce60163a56540da8dcf0c8d355138fcc299844b" upstream="core-technologies.lnx.16.0.r26-rel" dest-branch="core-technologies.lnx.16.0.r26-rel" clone-depth="1" />
+  <project path="hardware/dolby/upstream" name="hardware_dolby" remote="lenovo" revision="cnb">
+    <linkfile src="README.mkdn" dest="hardware/dolby/.find-ignore" />
+    <linkfile src="LunarisDolby/Android.bp" dest="packages/apps/LunarisDolby/Android.bp" />
+    <linkfile src="LunarisDolby/AndroidManifest.xml" dest="packages/apps/LunarisDolby/AndroidManifest.xml" />
+    <linkfile src="LunarisDolby/src" dest="packages/apps/LunarisDolby/src" />
+    <linkfile src="LunarisDolby/res" dest="packages/apps/LunarisDolby/res" />
+    <linkfile src="LunarisDolby/preinstalled-packages-platform-dolby.xml" dest="packages/apps/LunarisDolby/preinstalled-packages-platform-dolby.xml" />
+    <linkfile src="LunarisDolby/privapp-permissions-dolby.xml" dest="packages/apps/LunarisDolby/privapp-permissions-dolby.xml" />
+  </project>
+  <project path="packages/services/DeviceAsWebcam" name="android_packages_services_DeviceAsWebcam" remote="lenovo" revision="cnb" />
+  <project path="frameworks/native" name="frameworks_native" remote="lenovo" revision="cnb" />
+  <project path="vendor/extras" name="vendor_extras" remote="lenovo" revision="cnb" />
+  <project path="frameworks/base" name="frameworks_base" remote="lenovo" revision="cnb" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="lenovo" revision="cnb" />
+  <project path="kernel/platform/kernel-6.12/vendor/lenovo/sm8850" name="android_kernel_lenovo_sm8850" remote="lenovo" revision="lineage-24.0" />
+  <project path="kernel/platform/kernel-6.12/vendor/lenovo/sm8850-modules" name="android_kernel_lenovo_sm8850-modules" remote="lenovo" revision="lineage-24.0" />
+  <project path="kernel/platform/kernel-6.12/vendor/lenovo/sm8850-devicetrees" name="android_kernel_lenovo_sm8850-devicetrees" remote="lenovo" revision="lineage-24.0" />
+  <project path="device/qcom/sepolicy_vndr/sm8850" name="android_device_qcom_sepolicy_vndr" remote="lenovo" revision="cnb" />
+  <project path="frameworks/av" name="frameworks_av" remote="lenovo" revision="cnb" />
+  <project path="packages/apps/Updater" name="packages_apps_Updater" remote="lenovo" revision="cnb" />
+</manifest>
