@@ -30,4 +30,7 @@
   <project path="device/qcom/sepolicy_vndr/sm8850" name="android_device_qcom_sepolicy_vndr" remote="lenovo" revision="cnb" />
   <project path="frameworks/av" name="frameworks_av" remote="lenovo" revision="cnb" />
   <project path="packages/apps/Updater" name="packages_apps_Updater" remote="lenovo" revision="cnb" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="lenovo" revision="cnb" />
+  <project path="packages/apps/Evolver" name="packages_apps_Evolver" remote="lenovo" revision="cnb" />
+  <extend-project name="vendor_gms" revision="ccd9f9a924cd7cc35ae648f90dac26ff3bb954be" />
 </manifest>
