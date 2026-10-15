@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<manifest>
+  <remote name="lenovo" fetch="https://github.com/Lenovo-SM8850" />
+  <remote name="clo" fetch="https://git.codelinaro.org/clo/la" />
+  <project path="device/lenovo/sm8850-common" name="android_device_lenovo_sm8850-common" remote="lenovo" revision="cnb" />
+  <project path="device/lenovo/baldur" name="android_device_lenovo_baldur" remote="lenovo" revision="cnb" />
+  <project path="hardware/lenovo" name="android_hardware_lenovo" remote="lenovo" revision="cnb" />
+  <project path="vendor/lenovo/sm8850-common" name="proprietary_vendor_lenovo_sm8850-common" remote="lenovo" revision="cnb" />
+  <project path="vendor/lenovo/baldur" name="proprietary_vendor_lenovo_baldur" remote="lenovo" revision="cnb" />
+  <project path="vendor/translations" name="android_vendor_translations" remote="lenovo" revision="cnb" />
+  <project path="vendor/qcom/opensource/lights" name="platform/vendor/qcom-opensource/lights" remote="clo" revision="3ce60163a56540da8dcf0c8d355138fcc299844b" upstream="core-technologies.lnx.16.0.r26-rel" dest-branch="core-technologies.lnx.16.0.r26-rel" clone-depth="1" />
+  <!-- LunarisDolby shared effect handle fix and translations: based on 914678191a365d9e0566a42f59848fb1405b5eec. Prune the Pong vendor bundle; linkfiles expose only the locally fixed app. -->
+  <project path="hardware/dolby/upstream" name="hardware_dolby" remote="lenovo" revision="cnb">
+    <linkfile src="README.mkdn" dest="hardware/dolby/.find-ignore" />
+    <linkfile src="LunarisDolby/Android.bp" dest="packages/apps/LunarisDolby/Android.bp" />
+    <linkfile src="LunarisDolby/AndroidManifest.xml" dest="packages/apps/LunarisDolby/AndroidManifest.xml" />
+    <linkfile src="LunarisDolby/src" dest="packages/apps/LunarisDolby/src" />
+    <linkfile src="LunarisDolby/res" dest="packages/apps/LunarisDolby/res" />
+    <linkfile src="LunarisDolby/preinstalled-packages-platform-dolby.xml" dest="packages/apps/LunarisDolby/preinstalled-packages-platform-dolby.xml" />
+    <linkfile src="LunarisDolby/privapp-permissions-dolby.xml" dest="packages/apps/LunarisDolby/privapp-permissions-dolby.xml" />
+  </project>
+  <!-- DeviceAsWebcam teardown fix: based on c5b6159d081ed2e417974388d8f98a58d6b57656. -->
+  <project path="packages/services/DeviceAsWebcam" name="android_packages_services_DeviceAsWebcam" remote="lenovo" revision="cnb" />
+  <!-- Evolution X native graphics: optional Dolby Vision client rendering, based on 49687694bd18a4a2df972f89b6717dbfce610721. -->
+  <project path="frameworks/native" name="frameworks_native" remote="lenovo" revision="cnb" />
+  <!-- AxPlatform client: binding recovery and translations, based on 09818c2085fddb26c211760ba7e83548c3c80aca. -->
+  <project path="vendor/extras" name="vendor_extras" remote="lenovo" revision="cnb" />
+  <!-- Device integration: SystemUI, Shell floating windows and desktop tile, WM, services and translations, based on 720675982872108e15341ebc06b45b83b9551d4f. -->
+  <project path="frameworks/base" name="frameworks_base" remote="lenovo" revision="cnb" />
+  <!-- GameSpace: panel control sync, memory boost, floating quick start and translations, based on f046de4d28415ce074f85758c44d74764cd9a9e6. -->
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="lenovo" revision="cnb" />
+  <!-- android_kernel_lenovo_sm8850: based on 557159b6a0d06f1c6f07ec4c1f22bc9309a113e4. -->
+  <project path="kernel/platform/kernel-6.12/vendor/lenovo/sm8850" name="android_kernel_lenovo_sm8850" remote="lenovo" revision="lineage-24.0" />
+  <!-- android_kernel_lenovo_sm8850-modules: based on f2ecb6a09ea56bd8ec9a0bfd2e97f45e200ab322. -->
+  <project path="kernel/platform/kernel-6.12/vendor/lenovo/sm8850-modules" name="android_kernel_lenovo_sm8850-modules" remote="lenovo" revision="lineage-24.0" />
+  <!-- android_kernel_lenovo_sm8850-devicetrees: based on 297ae988607cbecb27d263f3c51c1ae7ea652a7b. -->
+  <project path="kernel/platform/kernel-6.12/vendor/lenovo/sm8850-devicetrees" name="android_kernel_lenovo_sm8850-devicetrees" remote="lenovo" revision="lineage-24.0" />
+  <!-- Lenovo video MEMC: based on 08110cc1a7e540367543d9cfac489be2b1517f49. -->
+  <project path="device/qcom/sepolicy_vndr/sm8850" name="android_device_qcom_sepolicy_vndr" remote="lenovo" revision="cnb" />
+  <!-- Media: Lenovo video FRC gating, effect suspend matching and the vendor IGBA allocator, based on 8e6f34b6babe951b980f77a449828749bcfafd2b. -->
+  <project path="frameworks/av" name="frameworks_av" remote="lenovo" revision="cnb" />
+  <!-- Updater: Lenovo SM8850 OTA repository and translations, based on e0c3089a7b69fa7062a7ebe4d6d434371342a4e0. -->
+  <project path="packages/apps/Updater" name="packages_apps_Updater" remote="lenovo" revision="cnb" />
+  <!-- Settings: local fork opening carrier settings apps in the right pane and the pen refresh rate switch, based on 849a2e85d50890bb7082a6eae501c80c4a6200e5. -->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="lenovo" revision="cnb" />
+  <!-- Evolver: spoof profiles, TrickyStore, contrast level and icon pack picker, based on 30624cb1106fce1163a113e9dfa73dffd58444c8. -->
+  <project path="packages/apps/Evolver" name="packages_apps_Evolver" remote="lenovo" revision="cnb" />
+  <extend-project name="vendor_gms" revision="d5490a1323f348fff1cc35f091b29ba583c67a84" />
+  <!-- LMOFreeform: sidebar tools opening apps in system floating windows, based on bbd156fd62965346c26ba71cb9139489745d8f2c. -->
+  <project path="packages/apps/LMOFreeform" name="packages_apps_LMOFreeform" remote="lenovo" revision="cnb" upstream="cnb" dest-branch="cnb" />
+  <!-- Telephony: keep the built-in data SIM disabled, based on 06469e757eb3e0da70eeba02ef270b5d28dc8c1e. -->
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="lenovo" revision="cnb" upstream="cnb" dest-branch="cnb" groups="pdk,sysui-studio" />
+  <!-- Wuji and default baldur SDM ABI profiles and HDR composition controls, based on 3f56965f0690fee568903083f09a8349a803da31 (LineageOS / CLO 171). -->
+  <project path="hardware/qcom-caf/sm8850/display/core" name="android_vendor_qcom_opensource_display-core" remote="lenovo" revision="0f8479c34acfb5413aabc621072a883903daa0ea" upstream="lineage-24.0-caf-sm8850" dest-branch="lineage-24.0-caf-sm8850" />
+  <!-- LiveDisplay: wait for the SDM backend at boot, based on a0f3ada220c573a2252bcb506407b04dfb9b3de0. -->
+  <project path="hardware/lineage/interfaces" name="android_hardware_lineage_interfaces" remote="lenovo" revision="0f7fdc499e8f8ecf00d138b0f2afa6f675265d07" upstream="lineage-24.0" dest-branch="lineage-24.0" />
+  <!-- LineageParts: match battery light switch defaults to the backend, based on aa7fc9d9878a526f96c7f00c81f86146e4194f62. -->
+  <project path="packages/apps/LineageParts" name="packages_apps_LineageParts" remote="lenovo" revision="cnb" />
+  <!-- Evolution X vendor: Notes quick settings tile on cp2a, no virtual display floating window app, based on 2c8759992acc901e75c213b3e2d38bc0f258439d. -->
+  <project path="vendor/lineage" name="vendor_evolution" remote="lenovo" revision="cnb" />
+  <project path="device/lenovo/wuji" name="android_device_lenovo_wuji" remote="lenovo" revision="cnb" />
+  <project path="vendor/lenovo/wuji" name="proprietary_vendor_lenovo_wuji" remote="lenovo" revision="cnb" />
+  <project path="vendor/lenovo/wuji-mcfg" name="proprietary_vendor_lenovo_wuji-mcfg" remote="lenovo" revision="cnb" />
+  <!-- Keep the SELinux source used by this build. -->
+  <remove-project name="LineageOS/android_external_selinux" />
+  <project path="external/selinux" name="platform/external/selinux" groups="pdk" remote="aosp" />
+</manifest>

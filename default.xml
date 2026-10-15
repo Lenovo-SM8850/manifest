@@ -814,7 +814,6 @@
   <project path="packages/services/BuiltInPrintService" name="LineageOS/android_packages_services_BuiltInPrintService" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/services/Car" name="LineageOS/android_packages_services_Car" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/services/CrossDeviceSync" name="platform/packages/services/CrossDeviceSync" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
-  <project path="packages/services/DeviceAsWebcam" name="LineageOS/android_packages_services_DeviceAsWebcam" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/services/display_safety" name="platform/packages/services/display_safety" groups="swcar,pdk" remote="aosp" />
   <project path="packages/services/DroidfoodAttestationFixer" name="platform/packages/services/DroidfoodAttestationFixer" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="packages/services/Iwlan" name="platform/packages/services/Iwlan" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
@@ -1061,4 +1060,6 @@
 
   <include name="snippets/evolution.xml" />
   <include name="snippets/lineage.xml" />
+  <include name="snippets/kernel-6.12.xml" />
+  <include name="snippets/lenovo.xml" />
 </manifest>
